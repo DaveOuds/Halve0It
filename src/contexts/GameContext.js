@@ -4,8 +4,7 @@ import { useToast } from "native-base";
 const GameContext = createContext();
 
 const GameContextProvider = (props) => {
-  //   const rounds = [15, 16, "Double", 17, 18, "Triple", 19, 20, "Bull"];
-  const rounds = [15];
+  const rounds = [15, 16, "Double", 17, 18, "Triple", 19, 20, "Bull"];
   const [round, setRound] = useState(0);
   const [playerNames, setPlayerNames] = useState([]);
   const [currPlayer, setCurrPlayer] = useState(0);
