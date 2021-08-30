@@ -9,7 +9,7 @@ export default function StartScreen({ navigation }) {
   const [input, setInput] = useState("");
 
   const renderItem = (x) => (
-    <Flex flex={1} key={x.index} direction="row" justify="space-between">
+    <Flex key={x.index} direction="row" justify="space-between">
       <Text color="#000" fontSize="lg">
         {x.item.name}
       </Text>

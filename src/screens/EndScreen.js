@@ -6,7 +6,7 @@ export default function EndScreen({ navigation }) {
   const { restartGame, playerNames, resetGame } = useContext(GameContext);
 
   const renderItem = (x) => (
-    <Flex flex={1} key={x.index} direction="row" justify="space-between">
+    <Flex key={x.index} direction="row" justify="space-between">
       <Text color="#000" fontSize="lg">
         {x.item.name}
       </Text>
