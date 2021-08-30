@@ -1,21 +1,17 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import "react-native-gesture-handler";
+import React from "react";
+import { GameContextProvider } from "./src/contexts/GameContext";
+import Router from "./src/components/Router";
+import { NativeBaseProvider, Box } from "native-base";
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+const App = () => (
+  <NativeBaseProvider>
+    <Box flex={1} bg="#3C4043" safeArea px={5}>
+      <GameContextProvider>
+        <Router />
+      </GameContextProvider>
+    </Box>
+  </NativeBaseProvider>
+);
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
